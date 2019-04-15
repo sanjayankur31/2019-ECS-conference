@@ -51,8 +51,8 @@
 % how to use multiple references to the same footnote: https://tex.stackexchange.com/questions/27763/beamer-multiple-references-to-the-same-footnote
 
 %% title %%
-\title{\centering Investigating activity dependent dynamics of synaptic structures using biologically plausible models of post-deafferentation network repair\\}
-\subtitle{\centering\includegraphics[width=0.2\textwidth]{99_images/UH-IT-theme.png}\\\includegraphics[scale=0.6]{99_images/UH-Logo-Black.eps}\\\vspace{0.2cm}Engineering and Computer Science Conference, 2019\\}
+\title{\centering \vspace{1cm}Investigating activity dependent dynamics of synaptic structures using biologically plausible models of post-deafferentation network repair\\}
+\subtitle{\normalsize\centering\includegraphics[width=0.15\textwidth]{99_images/UH-IT-theme.png}\\\includegraphics[scale=0.5]{99_images/UH-Logo-Black.eps}\\\vspace{0.1cm}Engineering and Computer Science Research Conference 2019\\}
 \author[Ankur Sinha]{Ankur Sinha, UH Biocomputation Group}
 \date{17/04/2019}
 
@@ -67,18 +67,103 @@
 %% Three slides for 5 minutes seems good
 %% So, 6 slides for 10 minutes
 \section{The brain: learning, plasticity, stability}
-\begin{frame}[c]{The brain: in numbers}
-  
+\begin{frame}[c]{The brain: neurons}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{99_images/Neurons.jpg}
+  \end{figure}
+  \note[item]{The brain is composed of specialised cells that enable it to process information by the use of electrical impulses}
+  \note[item]{As the figure shows, these cells, neurons, have specialised into many many types. They serve different functions, include different proteins and markers, and can be classified in many different ways.}
 \end{frame}
-\begin{frame}[c]{The brain: learning and plasticity}
-  
+\begin{frame}[t]{The brain: in numbers: neurons}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}[h]
+        \centering
+        \includegraphics[width=\textwidth]{99_images/brain-sizes.jpg}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item \alert{86000M} neurons\footnotemark{}.
+        \note[item]{The most recent estimate puts the number of neurons in the human brain at 86B.}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \vspace{0.2cm}
+  \footnotetext[1]{\fullcite{Herculano-Houzel2009}}
 \end{frame}
-
-\begin{frame}[c]{The brain: plasticity while homeostasis}
+\begin{frame}[t]{The brain: in numbers: synapses}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}[h]
+        \centering
+        \includegraphics[width=\textwidth]{99_images/reconstruction.jpg}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item \alert{Thousands} of connections \alert{(synapses)} between pairs\footnotemark[2].
+        \note[item]{Each neuron connects with thousands of other neurons, forming a massive network.}
+          \pause{}
+        \item Synapses underlie \alert{learning}\footnotemark[3].
+        \note[item]{This is especially important because we now know that it is in these synapses that learning occurs.}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \vspace{0.2cm}
+  \footnotetext[2]{\href{https://drexel.edu/medicine/about/departments/neurobiology-anatomy/research/gao-lab/images/}{Image from The GAO lab}}
+  \footnotetext[3]{\fullcite{Hebb1949}}
 \end{frame}
-
-\section{Studying homeostatic processes}
-\begin{frame}[c]{Experimental protocol I}
+\begin{frame}[c]{The brain: plasticity and learning}
+  \note[item]{We learn when synapses change in the brain}
+  \note[item]{As an example, let's say we have a neuron that was activated by a smell.}
+  \note[item]{Later, we found out that that was the smell of some food, say curry.}
+  \note[item]{Because these neurons fired one after the other here, this synapse is strengthened.}
+  \note[item]{When this happens repeatedly, the synapse is strengthened again and again.}
+  \note[item]{Until, the faintest whiff of the smell reminds you of the food!}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}[h]
+        \centering
+        \only<1>{\input{99_images/ltp-schematic-1.tex}}
+        \only<2>{\input{99_images/ltp-schematic-2.tex}}
+        \only<3>{\input{99_images/ltp-schematic-3.tex}}
+        \only<4>{\input{99_images/ltp-schematic-4.tex}}
+        \only<5>{\input{99_images/ltp-schematic-5.tex}}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}[h]
+        \centering
+        \input{99_images/spike-train.tex}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+\begin{frame}[c]{The brain: plasticity and stability?}
+  \begin{itemize}
+    \item Learning occurs \alert{all the time}.
+      \pause{}
+    \item In fact, \alert{whole synapses are formed and removed} all the time\footnotemark[4]: \textbf{structural plasticity}.
+      \note[item]{Changes in whole synapses change the structure of the networks of neurons, and is referred to as structural plasticity}
+      \pause{}
+    \item Unregulated brain activity causes disorders: \alert{epilepsy}.
+    \item So, how does the brain remain \alert{stable} despite changing all the time?
+      \pause{}
+      \note[item]{This led researchers to investigate stabilising processes which must work in parallel with learning}
+    \item Stabilising \alert{(homeostatic)} processes\footnotemark[5]?
+  \end{itemize}
+  \footnotetext[4]{\fullcite{Holtmaat2005}}
+  \footnotetext[5]{\fullcite{Turrigiano1999}}
+\end{frame}
+\begin{frame}[c]{Our research focus}
+  \begin{itemize}
+    \item We study \alert{homeostatic structural plasticity}.
+  \end{itemize}
+\end{frame}
+\section{Homeostatic structural plasticity}
+\begin{frame}[c]{Studying homeostatic structural plasticity: biologists}
   \note[item]{The protocol is pretty standard. Here, for a study in the visual cortex, the retinal field of a rat or a mouse is mapped.}
   \begin{columns}
     \begin{column}{0.5\textwidth}
@@ -93,47 +178,35 @@
   \footnotetext[1]{\fullcite{Keck2008}}
 \end{frame}
 
-\begin{frame}[c]{Experimental protocol II:\ after peripheral lesion}
+\begin{frame}[c]{after injury \ldots}
   \note[item]{Then, a part of the retina is lesioned. This cuts off inputs to a part of the visual cortex, as shown in the first figure. This forms the Lesion Projection Zone (LPZ). By repeated imaging of the region over months, the reorganisation of the network is tracked.}
   \note[item]{Other lesion studies use similar methods: digit removal, whisker trimming, and so on---anything that cuts off projecting activity on to a set of neurons.}
     \includegraphics[width=\textwidth]{99_images/keck-1-2c}%chktex 8
     \footnotetext[1]{\fullcite{Keck2008}}
 \end{frame}
-\section{Our model}
-\begin{frame}[c]{Simulation protocol}
-  \begin{figure}[h]
-    \centering
-    \input{99_images/simulation-stages.tex}
-  \end{figure}
-  \note[item]{Explain the simulation protocol.}
+\begin{frame}[c]{Our investigations: computational modelling}
+  \begin{itemize}
+    \item We make \alert{models of small parts of the brain} on computers.
+      \note[item]{Really small parts: 10000 neurons only}
+    \item We try to \alert{replicate} what biologists observe in their laboratories.
+      \pause{}
+    \item Modelling gives us \alert{flexibility}:
+      \begin{itemize}
+        \item we can change whatever we want, record whatever we want.
+        \item analyse data, test different hypotheses.
+      \end{itemize}
+      \pause{}
+    \item We then \alert{send our ideas back to biologists} for validation.
+  \end{itemize}
 \end{frame}
-\section{Results and discussion}
-\begin{frame}[c]{Deafferentation and successful repair}
+\begin{frame}[c]{Our model: replicates biological observations}
   \begin{figure}
       \centering
       \resizebox{\textwidth}{!}{\input{99_images/201811221433-firing-rate-snapshots-E}}%
+      \caption{Our model: 1000 neurons. Simulation duration: 7 days on the cluster with 128 CPU nodes.}
   \end{figure}
 \end{frame}
-\begin{frame}[c]{Conclusions}
-  \begin{itemize}
-    \item New model: biologically realistic.
-      \pause{}
-    \item Replicates experimental observations:
-      \pause{}
-    \item Suggests:
-      \begin{itemize}
-        \item Activity dependent dynamics for synaptic structures.
-        \item Single neuron stabilisation by structural plasticity.
-      \end{itemize}
-  \end{itemize}
-\end{frame}
-\begin{frame}[c]{Now what?}
-  \begin{itemize}
-    \item Functional implications of structural plasticity? Associative memory?
-      \pause{}
-    \item Application of growth dynamics to multi-compartmental neuron models?
-      \pause{}
-    \item Faithful modelling of cytoskeleton modification (actin)?
-  \end{itemize}
+\begin{frame}[c]{It suggests:}
+
 \end{frame}
 \end{document}
