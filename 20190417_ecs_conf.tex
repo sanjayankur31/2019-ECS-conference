@@ -66,7 +66,7 @@
 
 %% Three slides for 5 minutes seems good
 %% So, 6 slides for 10 minutes
-\section{The brain: learning, plasticity, stability}
+\section{The brain: numbers, learning, plasticity and stability.}
 \begin{frame}[c]{The brain: neurons}
   \begin{figure}[h]
     \centering
@@ -75,7 +75,7 @@
   \note[item]{The brain is composed of specialised cells that enable it to process information by the use of electrical impulses}
   \note[item]{As the figure shows, these cells, neurons, have specialised into many many types. They serve different functions, include different proteins and markers, and can be classified in many different ways.}
 \end{frame}
-\begin{frame}[t]{The brain: in numbers: neurons}
+\begin{frame}[c]{The brain: in numbers: neurons}
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{figure}[h]
@@ -86,14 +86,14 @@
     \begin{column}{0.5\textwidth}
       \begin{itemize}
         \item \alert{86000M} neurons\footnotemark{}.
-        \note[item]{The most recent estimate puts the number of neurons in the human brain at 86B.}
       \end{itemize}
     \end{column}
   \end{columns}
   \vspace{0.2cm}
   \footnotetext[1]{\fullcite{Herculano-Houzel2009}}
+  \note[item]{The most recent estimate puts the number of neurons in the human brain at 86B.}
 \end{frame}
-\begin{frame}[t]{The brain: in numbers: synapses}
+\begin{frame}[c]{The brain: in numbers: synapses}
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{figure}[h]
@@ -104,18 +104,21 @@
     \begin{column}{0.5\textwidth}
       \begin{itemize}
         \item \alert{Thousands} of connections \alert{(synapses)} between pairs\footnotemark[2].
-        \note[item]{Each neuron connects with thousands of other neurons, forming a massive network.}
+          \pause{}
+        \item Synapses can be \alert{excitatory} or \alert{inhibitory}.
           \pause{}
         \item Synapses underlie \alert{learning}\footnotemark[3].
-        \note[item]{This is especially important because we now know that it is in these synapses that learning occurs.}
       \end{itemize}
     \end{column}
   \end{columns}
   \vspace{0.2cm}
   \footnotetext[2]{\href{https://drexel.edu/medicine/about/departments/neurobiology-anatomy/research/gao-lab/images/}{Image from The Gao lab, College of Medicine, Drexel University.}}
   \footnotetext[3]{\fullcite{Hebb1949}}
+  \note[item]{Each neuron connects with thousands of other neurons, forming a massive network.}
+  \note[item]{This is especially important because we now know that it is in these synapses that learning occurs.}
+  \note[item]{This is important to mention because it is how the growth curves will be explained}
 \end{frame}
-\begin{frame}[c]{The brain: plasticity and learning}
+\begin{frame}[c]{The brain: learning via changes in synapses (plasticity)}
   \note[item]{We learn when synapses change in the brain}
   \note[item]{As an example, let's say we have a neuron that was activated by a smell.}
   \note[item]{Later, we found out that that was the smell of some food, say curry.}
@@ -157,12 +160,7 @@
   \footnotetext[4]{\fullcite{Holtmaat2005}}
   \footnotetext[5]{\fullcite{Turrigiano1999}}
 \end{frame}
-\begin{frame}[c]{Our research focus}
-  \begin{itemize}
-    \item We study \alert{homeostatic structural plasticity}.
-  \end{itemize}
-\end{frame}
-\section{Homeostatic structural plasticity}
+\section{Our research focus:\\Homeostatic Structural Plasticity}
 \begin{frame}[c]{Studying homeostatic structural plasticity: biologists}
   \note[item]{The protocol is pretty standard. Here, for a study in the visual cortex, the retinal field of a rat or a mouse is mapped.}
   \begin{columns}
@@ -181,32 +179,80 @@
 \begin{frame}[c]{after injury \ldots}
   \note[item]{Then, a part of the retina is lesioned. This cuts off inputs to a part of the visual cortex, as shown in the first figure. This forms the Lesion Projection Zone (LPZ). By repeated imaging of the region over months, the reorganisation of the network is tracked.}
   \note[item]{Other lesion studies use similar methods: digit removal, whisker trimming, and so on---anything that cuts off projecting activity on to a set of neurons.}
+  \note[item]{Given how complex the brain is, and so much is happening in it, there is only so much that can be studied in the lab at once.}
     \includegraphics[width=\textwidth]{99_images/keck-1-2c}%chktex 8
-    \footnotetext[1]{\fullcite{Keck2008}}
+    \footnotetext[6]{\fullcite{Keck2008}}
 \end{frame}
 \begin{frame}[c]{Our investigations: computational modelling}
   \begin{itemize}
-    \item We make \alert{models of small parts of the brain} on computers.
+    \item We made a \alert{new computer model} of a small part of the brain.
       \note[item]{Really small parts: 10000 neurons only}
-    \item We try to \alert{replicate} what biologists observe in their laboratories.
+    \item We \alert{replicated} what biologists observed in their laboratories.
       \pause{}
-    \item Modelling gives us \alert{flexibility}:
-      \begin{itemize}
-        \item we can change whatever we want, record whatever we want.
-        \item analyse data, test different hypotheses.
-      \end{itemize}
+    \item We \alert{tested different ways} in which homeostatic structural plasticity may occur.
       \pause{}
-    \item We then \alert{send our ideas back to biologists} for validation.
+    \item We will now \alert{send our ideas back to biologists} for validation.
+      \note[item]{It is an iterative process: based on what we find, biologists can do more targeted studies and then return to us with suggestions on how to tweak the model}
   \end{itemize}
 \end{frame}
-\begin{frame}[c]{Our model: replicates biological observations}
+\begin{frame}[c]{Our new model: replicates biological observations}
   \begin{figure}
       \centering
       \resizebox{\textwidth}{!}{\input{99_images/201811221433-firing-rate-snapshots-E}}%
-      \caption{Our model: 1000 neurons. Simulation duration: 7 days on the cluster with 128 CPU nodes.}
+      \caption{1000 neurons. Simulation duration: 7 days on the cluster\footnotemark[7] with 128 CPU nodes to simulate \textasciitilde{}5 hours of real brain time.}
   \end{figure}
+  \footnotetext[7]{UH High Performance Cluster: https://uhhpc.herts.ac.uk}
 \end{frame}
-\begin{frame}[c]{It suggests:}
-
+\begin{frame}[c]{Our model suggests that: I}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \centering
+      \input{99_images/growth-curves-den-ours.tex}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Neurons modify their \alert{dendrites (inputs)} to maintain their activity.
+          \pause{}
+        \item Too much: reduce excitatory inputs, increase inhibitory inputs.
+        \item Too less: vice versa.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+\begin{frame}[c]{Our model suggests that: II}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \centering
+      \input{99_images/growth-curves-axonal-ours.tex}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Neurons modify their \alert{axons (outputs)} to transfer their activity.
+          \pause{}
+        \item Too much excitation: pass on to neighbours.
+        \item Too much inhibition: pass on to neighbours.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+\begin{frame}[c]{What next?}
+  \begin{itemize}
+    \item Investigate \alert{functional consequences} of homeostatic structural plasticity: does the part of the brain behave the same after repair?
+      \pause{}
+    \item \alert{Further investigation} with more detailed modelling: move from simple point neuron models to more realistic multi-compartmental models.
+  \end{itemize}
+\end{frame}
+\begin{frame}[c]{Summary}
+  \begin{itemize}
+    \item \alert{The brain is plastic but stable}.
+    \item \alert{Neurons form and remove synapses all the time}---continuously modifying brain networks.
+      \pause{}
+    \item \alert{We investigated how the brain remains stable.}
+      \begin{itemize}
+        \item Homeostatic Structural Plasticity.
+        \item We developed a new, realistic computer model of brain injury.
+        \item Our simulations suggest that neurons maintain their own activity by forming and removing inputs, and transferring their states to other neurons.
+      \end{itemize}
+  \end{itemize}
 \end{frame}
 \end{document}
