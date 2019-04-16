@@ -85,7 +85,7 @@
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
-        \item \alert{86000M} neurons\footnotemark{}.
+        \item \alert{86B} neurons\footnotemark{}.
       \end{itemize}
     \end{column}
   \end{columns}
@@ -103,7 +103,7 @@
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
-        \item \alert{Thousands} of connections \alert{(synapses)} between pairs\footnotemark[2].
+        \item \alert{Thousands} of connections \alert{(synapses)}\footnotemark[2].
         \item Synapses can be \alert{excitatory} or \alert{inhibitory}.
         \item Synapses underlie \alert{learning}\footnotemark[3].
       \end{itemize}
@@ -196,14 +196,14 @@
   \begin{figure}
       \centering
       \resizebox{\textwidth}{!}{\input{99_images/201811221433-firing-rate-snapshots-E}}%
-      \caption{1000 neurons. Simulation duration: 7 days on the cluster\footnotemark[7] with 128 CPU nodes to simulate \textasciitilde{}5 hours of real brain time.}
+      \caption{1000 neurons. From left to right: normal network, network after injury, network during repair, network after repair.\\Simulation duration: 7 days on the cluster\footnotemark[7] with 128 CPU nodes to simulate \textasciitilde{}5 hours of real brain time.}
   \end{figure}
   \footnotetext[7]{UH High Performance Cluster: https://uhhpc.herts.ac.uk}
   \note[item]{The figure shows the neurons in our simulation.}
   \note[item]{You see how it looks similar to the figure from biological experiments.}
   \note[item]{We have the normal brain, then the injured brain, and then the repaired brain.}
 \end{frame}
-\begin{frame}[c]{Our model suggests that: I}
+\begin{frame}[c]{Our model suggests that}
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \centering
@@ -213,8 +213,8 @@
       \begin{itemize}
         \item Neurons modify their \alert{dendrites (inputs)} to maintain their activity.
           \pause{}
-        \item Too much: reduce excitatory inputs, increase inhibitory inputs.
-        \item Too less: vice versa.
+        \item More than necessary: reduce excitatory inputs, increase inhibitory inputs.
+        \item Less than necessary: vice versa.
       \end{itemize}
     \end{column}
   \end{columns}
@@ -227,10 +227,10 @@
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
-        \item Neurons modify their \alert{axons (outputs)} to transfer their activity.
+        \item Neurons modify their \alert{axons (outputs)} to make other neurons match their activity.
           \pause{}
-        \item Too much excitation: pass on to neighbours.
-        \item Too much inhibition: pass on to neighbours.
+        \item More than necessary: pass on excitation.
+        \item Less than necessary: pass on inhibition.
       \end{itemize}
     \end{column}
   \end{columns}
